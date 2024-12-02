@@ -1,0 +1,10 @@
+# ninja log v6
+7	370	1733150092317333835	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/memory.cpp.o	b5d9d03ee5c5b03b
+2	1509	1733150092314881445	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/main.cpp.o	476cf155bc3d6231
+9	1545	1733150092319543198	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/Simulator.cpp.o	93ce65851a0b8d0d
+1	1814	1733150092312016364	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/FileManager.cpp.o	831928e3f99d1d5a
+1815	1932	1733150094125504831	Project_2_Memory_Hierarchy_Simulator	8bdcd9879a9db9ce
+24	1978	1733151593359325064	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/main.cpp.o	476cf155bc3d6231
+1978	2553	1733151595313415485	Project_2_Memory_Hierarchy_Simulator	8bdcd9879a9db9ce
+19	1714	1733151882273686127	CMakeFiles/Project_2_Memory_Hierarchy_Simulator.dir/main.cpp.o	476cf155bc3d6231
+1714	1987	1733151883968751979	Project_2_Memory_Hierarchy_Simulator	8bdcd9879a9db9ce

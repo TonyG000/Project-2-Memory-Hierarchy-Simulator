@@ -1,28 +1,48 @@
-#include "Memory.h"
-#include "Simulator.h"
-#include "FileManager.h"
 #include <iostream>
 #include <vector>
-#include <string>
+#include "Memory.h"
+#include "FileManager.h"
+#include "Simulator.h"
 
 int main() {
+    // Step 1: Hardcoded Memory Information
+    int addressBits = 20;       // Number of bits for addressing the memory
+    int memoryAccessTime = 100; // Memory access time in cycles
+
     // Initialize Memory
-    Memory memory(16, 10); // 16 address bits, 10 cycles access time
+    Memory memory(addressBits, memoryAccessTime);
 
-    // Read access sequence from file
-    std::string inputFilePath = "access_sequence.txt";
-    std::vector<int> accessSequence = FileManager::readAccessSequence(inputFilePath);
+    // Step 2: Hardcoded Cache Information
+    int cacheSize = 64;         // Cache size in bytes
+    int cacheLineSize = 16;     // Cache line size in bytes
+    int cacheAccessTime = 5;    // Cache access time in cycles
 
-    // Initialize Simulator
+    // Validate hardcoded input
+    if (cacheLineSize > cacheSize || cacheLineSize <= 0) {
+        std::cerr << "Invalid cache configuration. Exiting.\n";
+        return 1;
+    }
+
+    // Step 3: Read Access Sequence from File
+    std::string filePath = "access_sequence.txt"; // File containing the sequence
+    std::vector<int> accessSequence = FileManager::readAccessSequence(filePath);
+
+    if (accessSequence.empty()) {
+        std::cerr << "Failed to read access sequence or file is empty. Exiting.\n";
+        return 1;
+    }
+
+    // Step 4: Initialize Simulator
     Simulator simulator(&memory, accessSequence);
 
-    // Run Simulation
+    // Step 5: Run Simulation
     simulator.runSimulation();
 
-    // Generate Report
-    std::string reportFilePath = "simulation_report.txt";
+    // Step 6: Generate Report
+    std::string reportFilePath = "/Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/simulation_report.txt";
     simulator.generateReport(reportFilePath);
 
+    // Output completion message
     std::cout << "Simulation completed. Report saved to " << reportFilePath << std::endl;
 
     return 0;
