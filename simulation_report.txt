@@ -1,5 +1,5 @@
-Total Accesses: 7
-Hits: 0
-Misses: 7
-Hit Ratio: 0.000000
-Miss Ratio: 1.000000
+Total Accesses: 5
+Hits: 1
+Misses: 4
+Hit Ratio: 0.200000
+Miss Ratio: 0.800000

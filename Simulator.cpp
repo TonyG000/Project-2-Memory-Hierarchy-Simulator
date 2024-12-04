@@ -1,15 +1,35 @@
-#include "Simulator.h"
+#include "simulator.h"
 #include <string>
 #include <iostream>
+#include "cache.h"
+#include <unordered_map>
 
 Simulator::Simulator(Memory *mem, const std::vector<int> &accessSeq)
     : memory(mem), access_sequence(accessSeq), hits(0), misses(0), total_accesses(0) {}
 
+
 void Simulator::runSimulation() {
+    int cacheSize = 64;
+    int lineSize = 16;
+    Cache cache(cacheSize, lineSize);
+
+    // Address to data mapping
+    std::unordered_map<int, std::string> addressToData = {
+        {1024, "cocacola"},
+        {2048, "icecream"},
+        {4096, "chips"},
+        {8192, "water"}
+    };
+
     for (int address : access_sequence) {
-        // For simplicity, assume all accesses result in a miss
-        // Cache logic can be added later for detailed simulation
-        misses++;
+        std::string data = addressToData[address];
+        std::cout << "Accessing memory at address: " << address << " with data: " << data << std::endl;
+
+        if (cache.accessMemory(address, data)) {
+            hits++;
+        } else {
+            misses++;
+        }
         total_accesses++;
     }
 }

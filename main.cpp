@@ -2,7 +2,7 @@
 #include <vector>
 #include "Memory.h"
 #include "FileManager.h"
-#include "Simulator.h"
+#include "simulator.h"
 
 int main() {
     // Step 1: Hardcoded Memory Information
@@ -35,7 +35,7 @@ int main() {
     // Step 4: Initialize Simulator
     Simulator simulator(&memory, accessSequence);
 
-    // Step 5: Run Simulation
+    // Step5: Run Simulation
     simulator.runSimulation();
 
     // Step 6: Generate Report
