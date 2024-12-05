@@ -9,14 +9,13 @@ class Cache {
 private:
     int cacheSize;
     int lineSize;
-    string data;
     int numLines;
-    std::vector<Cacheline> lines;
+    vector<Cacheline> lines;
 
 public:
     Cache(int cacheSize, int lineSize);
-    bool accessMemory(int address, const std::string &inputData);
+    bool accessMemory(int address, const string &inputData);
     void displayCache() const;
 };
 
-#endif // CACHE_H
+#endif

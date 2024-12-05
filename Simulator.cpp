@@ -7,21 +7,20 @@
 Simulator::Simulator(Memory *mem, const std::vector<int> &accessSeq)
     : memory(mem), access_sequence(accessSeq), hits(0), misses(0), total_accesses(0) {}
 
-
 void Simulator::runSimulation() {
     int cacheSize = 64;
     int lineSize = 16;
     Cache cache(cacheSize, lineSize);
 
-    // Address to data mapping
     std::unordered_map<int, std::string> addressToData = {
-        {1024, "cocacola"},
-        {2048, "icecream"},
-        {4096, "chips"},
-        {8192, "water"}
+        {1024, "1024"},
+        {2048, "2048"},
+        {4096, "4096"},
+        {8192, "8192"}
     };
 
-    for (int address : access_sequence) {
+    for (size_t i = 0; i < access_sequence.size(); i++) { // Normal indexed loop
+        int address = access_sequence[i];
         std::string data = addressToData[address];
         std::cout << "Accessing memory at address: " << address << " with data: " << data << std::endl;
 
@@ -35,12 +34,19 @@ void Simulator::runSimulation() {
 }
 
 float Simulator::calculateHitRatio() const {
-    return total_accesses == 0 ? 0.0f : static_cast<float>(hits) / total_accesses;
+    if (total_accesses == 0) {
+        return 0.0;
+    }
+    return static_cast<float>(hits) / total_accesses;
 }
 
 float Simulator::calculateMissRatio() const {
-    return total_accesses == 0 ? 0.0f : static_cast<float>(misses) / total_accesses;
+    if (total_accesses == 0) {
+        return 0.0; 
+    }
+    return static_cast<float>(misses) / total_accesses;
 }
+
 
 void Simulator::generateReport(const std::string &filePath) const {
     std::string report;
