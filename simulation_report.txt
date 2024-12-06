@@ -1,6 +1,0 @@
-Total Accesses: 5
-Hits: 2
-Misses: 3
-Hit Ratio: 0.400000
-Miss Ratio: 0.600000
-AMAT: 65.000000
