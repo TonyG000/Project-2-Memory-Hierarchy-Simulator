@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator -B /Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug
+"D:\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\C++\Project-2-Memory-Hierarchy-Simulator -B D:\C++\Project-2-Memory-Hierarchy-Simulator\cmake-build-debug
 -- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug
+-- Generating done (0.1s)
+-- Build files have been written to: D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug

@@ -10,7 +10,7 @@ private:
 public:
     Memory(int addressBits, int accessTime);
     int getTotalSize() const;
-    int getAccessTime() const;
+    float getAccessTime() const;
 };
 
 #endif // MEMORY_H

@@ -10,6 +10,6 @@ int Memory::getTotalSize() const {
     return total_memory;
 }
 
-int Memory::getAccessTime() const {
+float Memory::getAccessTime() const {
     return access_time;
 }

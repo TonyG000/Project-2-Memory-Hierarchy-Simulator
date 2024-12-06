@@ -10,12 +10,14 @@ private:
     int cacheSize;
     int lineSize;
     int numLines;
+    int cacheAccessTime;
     vector<Cacheline> lines;
 
 public:
-    Cache(int cacheSize, int lineSize);
+    Cache(int cacheSize, int lineSize, int cacheAccessTime);
     bool accessMemory(int address, const string &inputData);
     void displayCache() const;
+    float getcacheAccessTime();
 };
 
 #endif

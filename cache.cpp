@@ -2,11 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Cache::Cache(int cacheSize, int lineSize) {
+Cache::Cache(int cacheSize, int lineSize, int cacheAccessTime) {
     this->cacheSize = cacheSize;
     this->lineSize = lineSize;
     this->numLines = cacheSize / lineSize;
-
+    this->cacheAccessTime = cacheAccessTime;
     lines.resize(numLines);
 }
 
@@ -42,4 +42,8 @@ void Cache::displayCache() const {
         cout << "Line " << i << ": ";
         lines[i].display();
     }
+}
+
+float Cache::getcacheAccessTime() {
+    return this->cacheAccessTime;
 }

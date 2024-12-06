@@ -2,6 +2,7 @@
 #define SIMULATOR_H
 
 #include "Memory.h"
+#include "cache.h"
 #include "FileManager.h"
 #include <vector>
 #include <string>
@@ -13,12 +14,14 @@ private:
     int hits;
     int misses;
     int total_accesses;
+    Cache *cache;
 
 public:
-    Simulator(Memory *mem, const std::vector<int> &accessSeq);
+    Simulator(Memory *mem, const std::vector<int> &accessSeq, Cache *cache);
     void runSimulation();
     float calculateHitRatio() const;
     float calculateMissRatio() const;
+    float calculateAMAT() const;
     void generateReport(const std::string &filePath) const;
 };
 

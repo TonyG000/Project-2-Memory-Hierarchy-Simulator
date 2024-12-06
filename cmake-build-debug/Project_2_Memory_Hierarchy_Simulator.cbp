@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project_2_Memory_Hierarchy_Simulator"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_2_Memory_Hierarchy_Simulator">
+				<Option output="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Project_2_Memory_Hierarchy_Simulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/C++/Project-2-Memory-Hierarchy-Simulator/."/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Memory_Hierarchy_Simulator"/>
+					<CompileFile command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_2_Memory_Hierarchy_Simulator/fast">
+				<Option output="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Project_2_Memory_Hierarchy_Simulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/C++/Project-2-Memory-Hierarchy-Simulator/."/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Memory_Hierarchy_Simulator/fast"/>
+					<CompileFile command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/C++/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/FileManager.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/FileManager.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/Memory.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/Simulator.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/Simulator.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/cache.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/cache.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/cacheline.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/cachline.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/main.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/memory.cpp">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/memory.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/simulator.h">
+			<Option target="Project_2_Memory_Hierarchy_Simulator"/>
+		</Unit>
+		<Unit filename="D:/C++/Project-2-Memory-Hierarchy-Simulator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

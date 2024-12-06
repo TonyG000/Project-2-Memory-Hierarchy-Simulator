@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Memory.h"
+#include "cache.h"
 #include "FileManager.h"
 #include "simulator.h"
 
@@ -12,10 +13,13 @@ int main() {
     // Initialize Memory
     Memory memory(addressBits, memoryAccessTime);
 
+
     // Step 2: Hardcoded Cache Information
-    int cacheSize = 64;         // Cache size in bytes
-    int cacheLineSize = 16;     // Cache line size in bytes
+    int cacheSize = 4096;         // Cache size in bytes
+    int cacheLineSize = 1024;     // Cache line size in bytes
     int cacheAccessTime = 5;    // Cache access time in cycles
+
+    Cache cache(cacheSize, cacheLineSize, cacheAccessTime);
 
     // Validate hardcoded input
     if (cacheLineSize > cacheSize || cacheLineSize <= 0) {
@@ -33,13 +37,13 @@ int main() {
     }
 
     // Step 4: Initialize Simulator
-    Simulator simulator(&memory, accessSequence);
+    Simulator simulator(&memory, accessSequence, &cache);
 
     // Step5: Run Simulation
     simulator.runSimulation();
 
     // Step 6: Generate Report
-    std::string reportFilePath = "/Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/simulation_report.txt";
+    std::string reportFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\simulation_report.txt";
     simulator.generateReport(reportFilePath);
 
     // Output completion message
