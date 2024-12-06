@@ -14,12 +14,13 @@ int main() {
     Memory memory(addressBits, memoryAccessTime);
 
 
-    // Step 2: Hardcoded Cache Information
     int cacheSize = 4096;         // Cache size in bytes
     int cacheLineSize = 1024;     // Cache line size in bytes
-    int cacheAccessTime = 5;    // Cache access time in cycles
+    int cacheAccessTime = 5;      // Cache access time in cycles
 
-    Cache cache(cacheSize, cacheLineSize, cacheAccessTime);
+    // Initialize two caches: instruction and data
+    Cache instructionCache(cacheSize, cacheLineSize, cacheAccessTime);
+    Cache dataCache(cacheSize, cacheLineSize, cacheAccessTime);
 
     // Validate hardcoded input
     if (cacheLineSize > cacheSize || cacheLineSize <= 0) {
@@ -28,22 +29,29 @@ int main() {
     }
 
     // Step 3: Read Access Sequence from File
-    std::string filePath = "access_sequence.txt"; // File containing the sequence
-    std::vector<int> accessSequence = FileManager::readAccessSequence(filePath);
+    std::string instrFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/instruction_sequence.txt";
+    std::string dataFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/data_sequence.txt";
 
-    if (accessSequence.empty()) {
-        std::cerr << "Failed to read access sequence or file is empty. Exiting.\n";
+    std::vector<int> instructionAccessSequence = FileManager::readAccessSequence(instrFilePath);
+    std::vector<int> dataAccessSequence = FileManager::readAccessSequence(dataFilePath);
+
+    if (instructionAccessSequence.empty() || dataAccessSequence.empty()) {
+        std::cerr << "Failed to read access sequences or files are empty. Exiting.\n";
         return 1;
     }
 
+  if (instructionAccessSequence.empty() || dataAccessSequence.empty()) {
+    std::cerr << "Failed to read access sequences or files are empty. Exiting.\n";
+    return 1;
+  }
     // Step 4: Initialize Simulator
-    Simulator simulator(&memory, accessSequence, &cache);
+    Simulator simulator(&memory, instructionAccessSequence, dataAccessSequence, &instructionCache, &dataCache);
 
     // Step5: Run Simulation
     simulator.runSimulation();
 
     // Step 6: Generate Report
-    std::string reportFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\simulation_report.txt";
+    std::string reportFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/simulation_report.txt";
     simulator.generateReport(reportFilePath);
 
     // Output completion message
