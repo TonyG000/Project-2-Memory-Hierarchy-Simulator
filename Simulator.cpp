@@ -9,7 +9,7 @@ Simulator::Simulator(Memory *mem, const std::vector<int> &accessSeq, Cache *cach
 
 void Simulator::runSimulation() {
 
-    for (size_t i = 0; i < access_sequence.size(); i++) { // Normal indexed loop
+    for (size_t i = 0; i < access_sequence.size(); i++) {  
         int address = access_sequence[i];
         std::string data = to_string(address);
         std::cout << "Accessing memory at address: " << address << " with data: " << data << std::endl;
@@ -43,8 +43,23 @@ float Simulator::calculateMissRatio() const {
 }
 
 
-void Simulator::generateReport(const std::string &filePath) const {
+void Simulator::generateReportdata(const std::string &filePath) const {
     std::string report;
+    report +="Data report: \n";
+    report += "Total Accesses: " + std::to_string(total_accesses) + "\n";
+    report += "Hits: " + std::to_string(hits) + "\n";
+    report += "Misses: " + std::to_string(misses) + "\n";
+    report += "Hit Ratio: " + std::to_string(calculateHitRatio()) + "\n";
+    report += "Miss Ratio: " + std::to_string(calculateMissRatio()) + "\n";
+    report += "AMAT: " +  std::to_string(calculateAMAT()) + "\n";
+
+    FileManager::writeReport(filePath, report);
+}
+
+
+void Simulator::generateReportinstructions(const std::string &filePath) const {
+    std::string report;
+    report +="Instructions report: \n";
     report += "Total Accesses: " + std::to_string(total_accesses) + "\n";
     report += "Hits: " + std::to_string(hits) + "\n";
     report += "Misses: " + std::to_string(misses) + "\n";

@@ -28,23 +28,32 @@ int main() {
     }
 
     // Step 3: Read Access Sequence from File
-    std::string filePath = "access_sequence.txt"; // File containing the sequence
-    std::vector<int> accessSequence = FileManager::readAccessSequence(filePath);
+    std::string dataFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/data_sequence.txt";
+    std::string instrFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/instruction_sequence.txt";
 
-    if (accessSequence.empty()) {
-        std::cerr << "Failed to read access sequence or file is empty. Exiting.\n";
+
+    std::vector<int> dataAccessSequence = FileManager::readAccessSequence(dataFilePath);
+    std::vector<int> instructionAccessSequence = FileManager::readAccessSequence(instrFilePath);
+
+
+       if (instructionAccessSequence.empty() || dataAccessSequence.empty()) {
+        std::cerr << "Failed to read access sequences or files are empty. Exiting.\n";
         return 1;
     }
 
     // Step 4: Initialize Simulator
-    Simulator simulator(&memory, accessSequence, &cache);
+    Simulator simulator1(&memory, dataAccessSequence , &cache);
+    Simulator simulator2(&memory, instructionAccessSequence, &cache);
+
 
     // Step5: Run Simulation
-    simulator.runSimulation();
+    simulator1.runSimulation();
+    simulator2.runSimulation();
 
     // Step 6: Generate Report
     std::string reportFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\simulation_report.txt";
-    simulator.generateReport(reportFilePath);
+    simulator1.generateReportdata(reportFilePath);
+    simulator2.generateReportinstructions(reportFilePath);
 
     // Output completion message
     std::cout << "Simulation completed. Report saved to " << reportFilePath << std::endl;

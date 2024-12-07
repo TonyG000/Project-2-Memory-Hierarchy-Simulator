@@ -22,7 +22,9 @@ public:
     float calculateHitRatio() const;
     float calculateMissRatio() const;
     float calculateAMAT() const;
-    void generateReport(const std::string &filePath) const;
+    void generateReportdata(const std::string &filePath) const;
+    void generateReportinstructions(const std::string &filePath) const;
+
 };
 
 #endif // SIMULATOR_H
