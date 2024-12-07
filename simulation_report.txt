@@ -1,6 +1,14 @@
-Total Accesses: 5
-Hits: 2
-Misses: 3
-Hit Ratio: 0.400000
-Miss Ratio: 0.600000
-AMAT: 65.000000
+Data report: 
+Total Accesses: 7
+Hits: 0
+Misses: 7
+Hit Ratio: 0.000000
+Miss Ratio: 1.000000
+AMAT: 101.000000
+Instructions report: 
+Total Accesses: 7
+Hits: 0
+Misses: 7
+Hit Ratio: 0.000000
+Miss Ratio: 1.000000
+AMAT: 101.000000

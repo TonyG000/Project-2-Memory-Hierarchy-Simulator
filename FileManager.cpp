@@ -19,9 +19,8 @@ std::vector<int> FileManager::readAccessSequence(const std::string &filePath) {
     file.close();
     return accessSequence;
 }
-
 void FileManager::writeReport(const std::string &filePath, const std::string &report) {
-    std::ofstream file(filePath);
+    std::ofstream file(filePath, std::ios_base::app);
 
     if (!file) {
         std::cerr << "Error writing to file: " << filePath << std::endl;

@@ -7,19 +7,21 @@
 
 int main() {
     // Step 1: Hardcoded Memory Information
-    int addressBits = 20;       // Number of bits for addressing the memory
+    int addressBits = 32;       // Number of bits for addressing the memory
     int memoryAccessTime = 100; // Memory access time in cycles
 
     // Initialize Memory
-    Memory memory(addressBits, memoryAccessTime);
+    Memory memory1(addressBits, memoryAccessTime);
+    Memory memory2(addressBits, memoryAccessTime);
 
 
     // Step 2: Hardcoded Cache Information
-    int cacheSize = 4096;         // Cache size in bytes
-    int cacheLineSize = 1024;     // Cache line size in bytes
-    int cacheAccessTime = 5;    // Cache access time in cycles
+    int cacheSize = 256;         // Cache size in bytes
+    int cacheLineSize = 16;     // Cache line size in bytes
+    int cacheAccessTime = 1;    // Cache access time in cycles
 
-    Cache cache(cacheSize, cacheLineSize, cacheAccessTime);
+    Cache cache1(cacheSize, cacheLineSize, cacheAccessTime);
+    Cache cache2(cacheSize, cacheLineSize, cacheAccessTime);
 
     // Validate hardcoded input
     if (cacheLineSize > cacheSize || cacheLineSize <= 0) {
@@ -28,9 +30,8 @@ int main() {
     }
 
     // Step 3: Read Access Sequence from File
-    std::string dataFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/data_sequence.txt";
-    std::string instrFilePath = "C:/Users/dell/Documents/GitHub/Project-2-Memory-Hierarchy-Simulator/cmake-build-debug/instruction_sequence.txt";
-
+    std::string dataFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\data.txt";
+    std::string instrFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\ins.txt";
 
     std::vector<int> dataAccessSequence = FileManager::readAccessSequence(dataFilePath);
     std::vector<int> instructionAccessSequence = FileManager::readAccessSequence(instrFilePath);
@@ -42,8 +43,8 @@ int main() {
     }
 
     // Step 4: Initialize Simulator
-    Simulator simulator1(&memory, dataAccessSequence , &cache);
-    Simulator simulator2(&memory, instructionAccessSequence, &cache);
+    Simulator simulator1(&memory1, dataAccessSequence , &cache1);
+    Simulator simulator2(&memory2, instructionAccessSequence, &cache2);
 
 
     // Step5: Run Simulation

@@ -43,7 +43,15 @@ float Simulator::calculateMissRatio() const {
 }
 
 
-void Simulator::generateReportdata(const std::string &filePath) const {
+
+
+
+float Simulator::calculateAMAT() const {
+    float AMAT = cache->getcacheAccessTime() + calculateMissRatio() * memory->getAccessTime();
+    return AMAT;
+}
+
+void Simulator::generateReportdata(const string &filePath) const {
     std::string report;
     report +="Data report: \n";
     report += "Total Accesses: " + std::to_string(total_accesses) + "\n";
@@ -54,10 +62,10 @@ void Simulator::generateReportdata(const std::string &filePath) const {
     report += "AMAT: " +  std::to_string(calculateAMAT()) + "\n";
 
     FileManager::writeReport(filePath, report);
+
 }
 
-
-void Simulator::generateReportinstructions(const std::string &filePath) const {
+void Simulator::generateReportinstructions(const string &filePath) const {
     std::string report;
     report +="Instructions report: \n";
     report += "Total Accesses: " + std::to_string(total_accesses) + "\n";
@@ -68,9 +76,5 @@ void Simulator::generateReportinstructions(const std::string &filePath) const {
     report += "AMAT: " +  std::to_string(calculateAMAT()) + "\n";
 
     FileManager::writeReport(filePath, report);
-}
 
-float Simulator::calculateAMAT() const {
-    float AMAT = cache->getcacheAccessTime() + calculateMissRatio() * memory->getAccessTime();
-    return AMAT;
 }
