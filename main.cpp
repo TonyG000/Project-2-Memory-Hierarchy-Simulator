@@ -30,8 +30,8 @@ int main() {
     }
 
     // Step 3: Read Access Sequence from File
-    std::string dataFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\data.txt";
-    std::string instrFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\ins.txt";
+    std::string dataFilePath = "/Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/data.txt";
+    std::string instrFilePath = "/Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/ins.txt";
 
     std::vector<int> dataAccessSequence = FileManager::readAccessSequence(dataFilePath);
     std::vector<int> instructionAccessSequence = FileManager::readAccessSequence(instrFilePath);
@@ -52,7 +52,7 @@ int main() {
     simulator2.runSimulation();
 
     // Step 6: Generate Report
-    std::string reportFilePath = "D:\\C++\\Project-2-Memory-Hierarchy-Simulator\\simulation_report.txt";
+    std::string reportFilePath = "/Users/rodaynaelkhouly/Desktop/Project-2-Memory-Hierarchy-Simulator/simulation_report.txt";
     simulator1.generateReportdata(reportFilePath);
     simulator2.generateReportinstructions(reportFilePath);
 
